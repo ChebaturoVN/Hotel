@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @ObservedObject var viewModel: MainViewModel
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -19,8 +21,8 @@ struct MainView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        Coordinator().startMainView()
     }
 }
